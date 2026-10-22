@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mostradores</string>
+    <string name="subtitulo">CPU, RAM e disco em mostradores analógicos sobrepostos a todos os outros apps.</string>
+    <string name="status_parado">Monitores parados</string>
+    <string name="btn_permissao">1. Conceder permissão de sobreposição</string>
+    <string name="btn_iniciar">Iniciar monitores</string>
+    <string name="btn_parar">Parar monitores</string>
+    <string name="label_tamanho">Tamanho</string>
+    <string name="label_opacidade">Opacidade do painel</string>
+    <string name="label_intervalo">Intervalo de atualização</string>
+    <string name="hint">Arraste o painel para movê-lo. Dois toques abrem a configuração do app. Toque em ✕ para fechar.</string>
+    <string name="fechar">Fechar monitores</string>
+    <string name="status_ativo">Monitores ATIVOS sobre outros apps</string>
+    <string name="status_pronto">Permissão concedida — pronto para iniciar</string>
+    <string name="status_sem_permissao">Permissão de sobreposição NÃO concedida</string>
+    <string name="toast_permissao">Conceda a permissão de sobreposição primeiro.</string>
+    <string name="notif_titulo">Mostradores ativos</string>
+    <string name="notif_texto">CPU, RAM e disco sobrepostos a outros apps</string>
+    <string name="notif_canal">Monitor de sistema</string>
+    <string name="acao_parar">Parar</string>
+    <string name="cpu_aguardando">CPU: aguardando medição</string>
+    <string name="cpu_via">CPU via %1$s</string>
+    <string name="cpu_freq_aviso">CPU: medida pela frequência dos núcleos (estimativa)</string>
+    <string name="label_teste">Teste de armazenamento externo</string>
+    <string name="debug_titulo">Debug</string>
+    <string name="debug_subtitulo">Ferramentas de teste de armazenamento externo. Crie/remova um arquivo dummy no cartão para validar os mostradores.</string>
+    <string name="btn_debug">Debug</string>
+    <string name="btn_criar_dummy">Criar dummy 5 GB no cartão</string>
+    <string name="btn_remover_dummy">Remover dummy 5 GB</string>
+    <string name="dummy_criando">Criando dummy_5gb.bin… %1$d%%</string>
+    <string name="dummy_presente">dummy_5gb.bin presente (%1$s)</string>
+    <string name="dummy_ausente">dummy_5gb.bin não criado</string>
+    <string name="btn_permissao_armazenamento">Conceder permissão de armazenamento</string>
+    <string name="armazenamento_sem_permissao">Permissão de acesso a todos os arquivos NÃO concedida.</string>
+    <string name="toast_sem_armazenamento">Conceda a permissão de armazenamento para gravar no cartão.</string>
+    <string name="toast_sem_armazenamento_ok">Permissão de armazenamento concedida.</string>
+</resources>
