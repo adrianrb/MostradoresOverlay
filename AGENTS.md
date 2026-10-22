@@ -6,7 +6,9 @@ Android app **Mostradores** (`com.mostradores.overlay`): floating analog gauges 
 
 ## Build and verify
 
-- `./build.sh` is the only supported build. It requires `aapt2`, `javac`, `jar`, `keytool`, `zipalign`, `apksigner`, `unzip`, and `zip` on `PATH`; the script aborts and names whatever is missing.
+- `./build.sh` is the only supported build. It needs `aapt2`, `javac`, `jar`, `keytool`, `zipalign`, `apksigner`, `unzip`, and `zip` on `PATH`; the script aborts and names whatever is missing.
+- Toolchain (Windows-hosted): SDK `C:\Desenv\Android\Sdk` (build-tools `34.0.0`, `platforms/android-34`) and JDK 21 `C:\Desenv\JDKs\jdk-21.0.7`; from WSL these are `/mnt/c/Desenv/...`.
+- Those binaries are `.exe`. From WSL use `tools/wsl-build.sh`, which creates temporary extensionless symlinks + `apksigner`/`zip` shims and calls `build.sh` with `ANDROID_JAR=tools/android.jar` / `R8_JAR=tools/r8.jar` — relative paths, because Windows `javac.exe`/`aapt2.exe` cannot read `/mnt/c/...` absolute paths.
 - Tool jars ship in the repo: `tools/android.jar` and `tools/r8.jar`. Override paths with `ANDROID_JAR` / `R8_JAR`; if `tools/` is absent the script falls back to `/tmp/opencode/...`.
 - Compiles with `javac --release 8`; minSdk 26 / targetSdk 34; dexed by D8 from `r8.jar`. There are no unit/instrumentation tests, lint config, or CI — the build plus `apksigner verify` / `aapt2 dump badging out/*.apk` is the whole verification.
 - `build.sh` starts with `rm -rf build out`. Never edit anything in `build/`: `build/gen/R.java`, `build/sources.txt`, and `build/dex` are generated.

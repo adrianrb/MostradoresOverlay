@@ -94,5 +94,5 @@ apksigner sign \
     build/aligned.apk
 
 echo "== verificando =="
-apksigner verify --verbose "$OUT" | head -6
+apksigner verify --verbose "$OUT" | sed -n '1,6p'
 ls -lh "$OUT"
